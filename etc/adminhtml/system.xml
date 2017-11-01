@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<!--
+  ~
+  ~ Copyright (c) 2017. @pablo
+  ~
+  ~ Test Code
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="Pablo_" translate="label" sortOrder="200">
+            <label>Pablo_</label>
+        </tab>
+        <section id="Pablo_deliveryzones" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+        <label>Delivery Zones</label>
+        <tab>Pablo_</tab>
+        <resource>Pablo_DeliveryZones::Pablo_config</resource>
+        <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>General</label>
+            <field id="version" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Version</label>
+                <frontend_model>Pablo\DeliveryZones\Block\System\Config\Form\Field\ModuleVersion</frontend_model>
+            </field>
+            <field id="single_store_mode" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Single Store Mode</label>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                <comment>
+                    Enable the service for a single store configuration.
+                </comment>
+            </field>
+        </group>
+
+        <group id="shipping" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Shipping</label>
+
+                <field id="shipping_holidays" translate="label comment" sortOrder="40" type="textarea" showInDefault="1"
+                   showInWebsite="1" showInStore="1" canRestore="1">
+                <label>Holidays Array</label>
+                <comment>Use to calculate estimated delivery day, format ["YYYY-MM-DD","YYYY-MM-DD"]</comment>
+            </field>
+        </group>
+            <group id="alerts" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Alerts</label>
+                <field id="alert_enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Alerts Emails</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        Enable emails to administrators (Alerts are send to debug logs)
+                    </comment>
+                </field>
+                <field id="email_sender_name" translate="label comment" sortOrder="40" type="text" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Email Sender Name</label>
+                </field>
+                <field id="email_sender_email" translate="label comment" sortOrder="40" type="text" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Email Sender </label>
+                </field>
+                <field id="email_send_to" translate="label comment" sortOrder="40" type="text" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Email Destinations </label>
+                    <comment>Multiple destinations in array ["xxx@xxx.com","xxx1@xxx.com"]</comment>
+                </field>
+                <field id="send_button" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Pablo\DeliveryZones\Block\System\Config\Form\Button</frontend_model>
+                </field>
+            </group>
+            <group id="customer_address" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Customer Menu / Delivery Address</label>
+            <comment>Note: Always preview before publish</comment>
+                <field id="address_outzone" translate="label comment" sortOrder="40" type="select" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Out Zone Message Block</label>
+                    <source_model>Pablo\DeliveryZones\Model\Config\Source\Blocks</source_model>
+                    <comment>Insert CMS Block</comment>
+                </field>
+                <field id="address_failzone" translate="label comment" sortOrder="40" type="select" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Geocoding Fail Message Block</label>
+                    <source_model>Pablo\DeliveryZones\Model\Config\Source\Blocks</source_model>
+                    <comment>Insert CMS Block</comment>
+                </field>
+            </group>
+
+            <group id="modal" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Modal Overlay</label>
+            <comment>Note: Always preview before publish</comment>
+            <field id="modal_enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Enable Home Page Modal</label>
+                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                <comment>
+                    Enable Home Page Modal
+                </comment>
+            </field>
+                <field id="modal_one_view" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable One Time View</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        Enable one time view for user session on home page access
+                    </comment>
+                </field>
+                <field id="modal_dly_data_view" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Delivery Data View</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        Enable Delivery day/time of the customer address's insert
+                    </comment>
+                </field>
+                <field id="modal_header" translate="label comment" sortOrder="40" type="select" showInDefault="1"
+                   showInWebsite="1" showInStore="1" canRestore="1">
+                <label>Header Block</label>
+                    <source_model>Pablo\DeliveryZones\Model\Config\Source\Blocks</source_model>
+                    <comment>Insert CMS Block</comment>
+            </field>
+            <field id="modal_center" translate="label comment" sortOrder="40" type="select" showInDefault="1"
+                   showInWebsite="1" showInStore="1" canRestore="1">
+                <label>Center Block</label>
+                <source_model>Pablo\DeliveryZones\Model\Config\Source\Blocks</source_model>
+
+                <comment>Insert CMS Block</comment>
+            </field>
+            <field id="modal_footer" translate="label comment" sortOrder="40" type="select" showInDefault="1"
+                   showInWebsite="1" showInStore="1" canRestore="1">
+                <label>Footer Block</label>
+                <source_model>Pablo\DeliveryZones\Model\Config\Source\Blocks</source_model>
+                <comment>Insert CMS Block</comment>
+            </field>
+            <field id="modal_inzone" translate="label comment" sortOrder="40" type="select" showInDefault="1"
+                   showInWebsite="1" showInStore="1" canRestore="1">
+                <label>In Zone Message Block</label>
+                <source_model>Pablo\DeliveryZones\Model\Config\Source\Blocks</source_model>
+                <comment>Insert CMS Block</comment>
+            </field>
+            <field id="modal_outzone" translate="label comment" sortOrder="40" type="select" showInDefault="1"
+                   showInWebsite="1" showInStore="1" canRestore="1">
+                <label>Out Zone Message Block</label>
+                <source_model>Pablo\DeliveryZones\Model\Config\Source\Blocks</source_model>
+                <comment>Insert CMS Block</comment>
+            </field>
+            <field id="modal_failzone" translate="label comment" sortOrder="40" type="select" showInDefault="1"
+                           showInWebsite="1" showInStore="1" canRestore="1">
+            <label>Geocoding Fail Message Block</label>
+                <source_model>Pablo\DeliveryZones\Model\Config\Source\Blocks</source_model>
+                <comment>Insert CMS Block</comment>
+        </field>
+        </group>
+        </section>
+
+
+        <section id="carriers" translate="label" type="text" sortOrder="320" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="zxshipping" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Pablo_ Delivery Zones Shipping</label>
+                <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                 <field id="title" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                </field>
+                <!--[Carrier's displayed error message on storefront if unavailable]-->
+             <!--   <field id="specificerrmsg" translate="label" type="textarea" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Displayed Error Message</label>
+                </field> -->
+                <!--[Carrier's show method if unavailable with error message activate field]-->
+              <!--  <field id="showmethod" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Show Method if Not Applicable</label>
+                    <frontend_class>shipping-skip-hide</frontend_class>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field> -->
+                <!--[Carrier's sort order]-->
+                <field id="sort_order" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

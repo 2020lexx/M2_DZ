@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+  ~
+  ~ Copyright (c) 2017. @pablo
+  ~
+  ~ Test Code
+  -->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd" label="Customer My Account (All Pages)" design_abstraction="custom">
+    <head>
+        <title>Delivery Zones</title>
+        <css src="Pablo_DeliveryZones::css/Pablo_deliveryzones.css"/>
+        <script src="https://maps.googleapis.com/maps/api/js?sensor=false" src_type="url"/>
+         <css src="Pablo_DeliveryZones::css/Pablo_grid.min.css"/>
+         <css src="Pablo_DeliveryZones::css/leaflet.css"/>
+    </head>
+
+
+    <body>
+        <attribute name="class" value="account"/>
+        <referenceContainer name="customer_account_navigation">
+        <!--    <block class="Magento\Customer\Block\Account\Delimiter" name="zx-customer-account-navigation-delimiter" template="Magento_Customer::account/navigation-delimiter.phtml">
+
+            </block> -->
+                 <block class="Magento\Framework\View\Element\Html\Link\Current" name="zx-customer-account-navigation" >
+                     <arguments>
+                        <argument name="label" xsi:type="string" translate="true">Delivery Information</argument>
+                        <argument name="path" xsi:type="string">deliveryzones/index/customeraccount</argument>
+                      </arguments>
+                </block>
+          </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--
+  ~
+  ~ Copyright (c) 2017. @pablo
+  ~
+  ~ Test Code
+  -->
+
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=false" src_type="url"/>
+	 	<script src="Pablo_DeliveryZones::js/Pablo_code.js"/>
+	    <css src="Pablo_DeliveryZones::css/Pablo_grid.min.css"/> -->
+		<css src="Pablo_DeliveryZones::css/Pablo_deliveryzones.css"/>
+		<css src="Pablo_DeliveryZones::css/leaflet.css"/>
+	</head>
+	<body>
+		<referenceContainer name="content">
+			<block class="Pablo\DeliveryZones\Block\Index\Index" name="index.index" template="Pablo_DeliveryZones::index/index.phtml"/>
+		</referenceContainer>
+	</body>
+</page>

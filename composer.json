@@ -1,0 +1,22 @@
+{
+    "name": "Pablo/module-deliveryzones",
+    "description": "Delivery Zones Shipping",
+    "type": "magento2-module",
+    "version": "0.1.1",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "@pablo",
+            "role": "Leader"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Pablo\\DeliveryZones\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

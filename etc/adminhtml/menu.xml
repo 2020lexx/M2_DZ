@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--
+  ~
+  ~ Copyright (c) 2017. @pablo
+  ~
+  ~ Test Code
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Pablo::top_level" module="Pablo_DeliveryZones" resource="Magento_Backend::content" sortOrder="9999" title="Pablo_"/>
+		<add id="Pablo_DeliveryZones::Pablo_menu" resource="Pablo_DeliveryZones::Pablo_menu" module="Pablo_DeliveryZones" title="Delivery Zones" sortOrder="10" parent="Pablo::top_level"/>
+
+		<add action="adminhtml/system_config/edit/section/Pablo_deliveryzones" id="Pablo_DeliveryZones::Pablo_general" module="Pablo_DeliveryZones" parent="Pablo_DeliveryZones::Pablo_menu" resource="Pablo_DeliveryZones::Pablo_general" sortOrder="5" title="General Config"/>
+		<add action="Pablo_deliveryzones/config/index" id="Pablo_DeliveryZones::Pablo_config" module="Pablo_DeliveryZones" parent="Pablo_DeliveryZones::Pablo_menu" resource="Pablo_DeliveryZones::Pablo_config" sortOrder="10" title="Main Config"/>
+		<add action="Pablo_deliveryzones/zones/index" id="Pablo_DeliveryZones::Pablo_zones" module="Pablo_DeliveryZones" parent="Pablo_DeliveryZones::Pablo_menu" resource="Pablo_DeliveryZones::Pablo_zones" sortOrder="20" title="Zones Configuration"/>
+		<add action="Pablo_deliveryzones/sections/index" id="Pablo_DeliveryZones::Pablo_sections" module="Pablo_DeliveryZones" parent="Pablo_DeliveryZones::Pablo_menu" resource="Pablo_DeliveryZones::Pablo_sections" sortOrder="30" title="Sections Configuration"/>
+		<add action="Pablo_deliveryzones/customerdeliveryzone/index" id="Pablo_DeliveryZones::Pablo_customerdeliveryzone" module="Pablo_DeliveryZones" parent="Pablo_DeliveryZones::Pablo_menu" resource="Pablo_DeliveryZones::Pablo_customerdeliveryzone" sortOrder="40" title="Customer Delivery Zone Data"/>
+		<add action="adminhtml/system_config/edit/section/carriers" id="Pablo_DeliveryZones::Pablo_shipping" module="Pablo_DeliveryZones"  parent="Pablo_DeliveryZones::Pablo_menu" resource="Pablo_DeliveryZones::Pablo_shipping" sortOrder="50" title="Shipping Configuration"/>
+
+	</menu>
+</config>

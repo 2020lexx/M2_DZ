@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!--
+  ~
+  ~ Copyright (c) 2017. @pablo
+  ~
+  ~ Test Code
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Pablo_DeliveryZones::Zones" sortOrder="10" title="Zones">
+					<resource id="Pablo_DeliveryZones::Zones_save" sortOrder="10" title="Save Zones"/>
+					<resource id="Pablo_DeliveryZones::Zones_delete" sortOrder="20" title="Delete Zones"/>
+					<resource id="Pablo_DeliveryZones::Zones_update" sortOrder="30" title="Update Zones"/>
+					<resource id="Pablo_DeliveryZones::Zones_view" sortOrder="40" title="View Zones"/>
+				</resource>
+				<resource id="Pablo_DeliveryZones::Sections" sortOrder="10" title="Sections">
+					<resource id="Pablo_DeliveryZones::Sections_save" sortOrder="10" title="Save Sections"/>
+					<resource id="Pablo_DeliveryZones::Sections_delete" sortOrder="20" title="Delete Sections"/>
+					<resource id="Pablo_DeliveryZones::Sections_update" sortOrder="30" title="Update Sections"/>
+					<resource id="Pablo_DeliveryZones::Sections_view" sortOrder="40" title="View Sections"/>
+				</resource>
+				<resource id="Pablo_DeliveryZones::CustomerDeliveryZone" sortOrder="10" title="CustomerDeliveryZone">
+					<resource id="Pablo_DeliveryZones::CustomerDeliveryZone_save" sortOrder="10" title="Save CustomerDeliveryZone"/>
+					<resource id="Pablo_DeliveryZones::CustomerDeliveryZone_delete" sortOrder="20" title="Delete CustomerDeliveryZone"/>
+					<resource id="Pablo_DeliveryZones::CustomerDeliveryZone_update" sortOrder="30" title="Update CustomerDeliveryZone"/>
+					<resource id="Pablo_DeliveryZones::CustomerDeliveryZone_view" sortOrder="40" title="View CustomerDeliveryZone"/>
+				</resource>
+				<resource id="Pablo_DeliveryZones::config" sortOrder="10" title="Config">
+					<resource id="Pablo_DeliveryZones::config_save" sortOrder="10" title="Save config"/>
+					<resource id="Pablo_DeliveryZones::config_delete" sortOrder="20" title="Delete config"/>
+					<resource id="Pablo_DeliveryZones::config_update" sortOrder="30" title="Update config"/>
+					<resource id="Pablo_DeliveryZones::config_view" sortOrder="40" title="View config"/>
+				</resource>
+			</resource>
+
+
+        </resources>
+	</acl>
+
+</config>

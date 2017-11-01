@@ -1,0 +1,121 @@
+/*
+ *
+ * Copyright (c) 2017. @pablo
+ *
+ * Test Code
+ */
+
+/*
+    Pablo_
+    Delivery Zones
+    custom css
+ */
+
+#Pablo_main_modal{
+   /* visibility: hidden; */
+    display: none;
+}
+.Pablo_deliveryzones {
+    padding-top: 5px;
+}
+.Pablo_deliveryzones .field{
+    padding: 2px;
+    padding-left: 10px;
+    float: left;
+    margin: 0 0 5px;
+}
+#Pablo_address_edit_submit{
+    margin-bottom: 2px;
+}
+.Pablo_deliveryzones .field_left{
+   clear: left;
+}
+.Pablo_deliveryzones .separator{
+    margin-top: 25px;
+}
+.Pablo_deliveryzones .button-right{
+    margin-top: 28px;
+}
+.Pablo_deliveryzones .zone_data{
+}
+#Pablo_deliveryzones_data_result {
+    border: 1px solid #c2c2c2;
+    height: 300px;
+}
+#Pablo_deliveryzones_data_result .result-label{
+    clear: left;
+    padding: 2px;
+    float: left;
+}
+#Pablo_deliveryzones_data_result .result-data{
+    float:left;
+    padding: 2px;
+}
+#Pablo_deliveryzones_data_result .result-line{
+    clear: left;
+    float: left;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 100%;
+}
+.Pablo_deliveryzones #delivery_map{
+    height: 300px;
+}
+.Pablo_deliveryzones .php_var{
+    display:none;
+}
+.Pablo_deliveryzones #Pablo_address_save_submit{
+    float: right;
+    clear: left;
+    margin-top: 10px;
+}
+.Pablo_deliveryzones .marker-icon-image{
+
+    background-image: url("../css/images/markers-matte.png");
+    background-repeat: no-repeat;
+    width: 35px; /*or your image's width*/
+    height: 45px; /*or your image's height*/
+    margin-left: -13px;
+    margin-top: -40px;
+    padding: 0;
+}
+.Pablo_deliveryzones .marker-icon-color-2{
+    background-position-x: -35px;
+}
+.Pablo_deliveryzones .marker-icon-color-3{
+    background-position-x: -70px;
+}
+.Pablo_deliveryzones .marker-icon-color-4{
+    background-position-x: -105px;
+}
+.Pablo_deliveryzones .marker-icon-color-5{
+    background-position-x: -140px;
+}
+.Pablo_deliveryzones .marker-icon-color-6{
+    background-position-x: -175px;
+}
+.Pablo_deliveryzones .marker-icon-color-7{
+     background-position-x: -210px;
+ }
+.Pablo_deliveryzones .marker-facility{
+
+    background-image: url("../css/images/facility-icon.png");
+    background-repeat: no-repeat;
+    width: 35px; /*or your image's width*/
+    height: 45px; /*or your image's height*/
+     margin-top: -27px;
+    background-size: contain;
+    padding: 0;
+}
+.leaflet-div-icon{
+    background: none !important;
+    border: none !important;
+}
+/*
+ leaflet zoom transition
+.leaflet-zoom-anim .leaflet-zoom-animated {
+    -webkit-transition: -webkit-transform 2s cubic-bezier(0,0,1,1)  !important;
+    -moz-transition:    -moz-transform 2s cubic-bezier(0,0,1,1) !important;
+    -o-transition:      -o-transform 2s cubic-bezier(0,0,1,1) !important;
+    transition:         transform 2s cubic-bezier(0,0,1,1) !important;
+}*/

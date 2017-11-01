@@ -1,0 +1,101 @@
+
+<div id="Pablo_main_modal">
+<div class="Pablo_deliveryzones  row">
+    <div id="map_init" class="php_var" ><?php echo $block->helper->mapInit(); ?></div>
+<div class="col-md-8">
+ <div id="delivery_map"></div>
+</div>
+    <div id="Pablo_deliveryzones_data_result" class="col-md-4 " >
+        <div id="Pablo_deliveryzones_data_result_div" style="visibility: hidden;">
+        <h3>You are in!!</h3>
+        <div class="result-label"><?php echo __('Zone') ?>:</div><div id="zone_name" class="result-data"></div>
+        <div class="result-label"><?php echo __('Section') ?>:</div><div id="section_name" class="result-data"></div>
+        <div class="result-label"><?php echo __('Delivery Days') ?>:</div><div id="section_delivery_days" class="result-data"></div>
+        <div class="result-label"><?php echo __('Delivery Time') ?>:</div><div id="section_delivery_time" class="result-data"></div>
+        <hr class="result-line" >
+        <div class="result-label"><?php echo __('Distance to Facility (by road)') ?>:</div><div id="distanceText" class="result-data"></div>
+        <hr class="result-line" >
+        <div class="result-label"><?php echo __('Delivery Cost') ?>: €</div><div id="section_dly_cost" class="result-data"></div>
+        </div>
+    </div>
+</div>
+<div class="Pablo_deliveryzones row">
+    <form id="Pablo_deliveryzones_input_form" onsubmit="return false;" data-toggle="validator" role="form">
+    <input type="hidden" name="session_id" value="<?php echo 'session'; ?>"
+    <fieldset class="fieldset">
+        <div class="col-md-4">
+
+            <legend class="field legend"><span><?php echo __('Delivery Zone') ?></span></legend>
+            <br />
+            <div class="field note no-label field_left"><?php
+            echo __('Insert your address and get your Delivery Zone data.') ?></div>
+
+    </div>
+    <div class="col-md-8">
+       <div class="field address field_left">
+            <label class="label" for="address"><span><?php echo __('Address') ?></span></label>
+            <div  >
+            <!--    <div class="control">-->
+                <input required size="35" name="address" id="address" class="input-text form-control"  data-validate="{required:true}"/>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="field address_number " >
+            <label class="label" for="address_number"><span><?php echo __('Address Number') ?></span></label>
+            <div  >
+                <input required size="10" maxlength="10" name="address_number" id="address_number"  class="input-text form-control"  data-validate="{required:true, 'validate-email':true}"/>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="field pobox field_left">
+            <label class="label" for="pobox"><span><?php  echo __('P.O. Box') ?></span></label>
+            <div  >
+                <input size="10" name="pobox" id="pobox" value="" class="input-text form-control"   />
+            </div>
+        </div>
+        <div class="field city " style="float:left">
+           <label class="label" for="city"><span><?php  echo __('City') ?></span></label>
+            <div  >
+                <input required size="35" name="city" id="city" class="input-text form-control"  data-validate="{required:true}"/>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="field state">
+            <label class="label" for="state"><span><?php echo __('State') ?></span></label>
+            <div  >
+                <input  required size="4" name="state" id="state" class="input-text  form-control"  data-validate="{required:true}"/>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="field country">
+            <label class="label" for="country"><span><?php echo __('Country') ?></span></label>
+            <div >
+                <input  required size="15" name="country" id="country" value="<?php /* @escapeNotVerified */ echo __('Italy') ?>" readonly class="input-text  form-control"  data-validate="{required:true}"/>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="field button-right">
+
+            <button id="Pablo_deliveryzones_submit"  class="action primary submit">
+                <span><?php  echo __('Submit') ?></span>
+            </button>
+        </div>
+
+    </div>
+
+
+    </fieldset>
+    </form>
+</div>
+</div>
+
+<script type="text/x-magento-init">
+    {
+
+        "*": {
+        "Pablo_DeliveryZones/js/frontend_index": {  }
+
+      }
+    }
+
+</script>

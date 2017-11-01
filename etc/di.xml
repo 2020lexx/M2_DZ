@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<!--
+  ~
+  ~ Copyright (c) 2017. @pablo
+  ~
+  ~ Test Code
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Pablo\DeliveryZones\Api\ZonesRepositoryInterface" type="Pablo\DeliveryZones\Model\ZonesRepository"/>
+	<preference for="Pablo\DeliveryZones\Api\Data\ZonesInterface" type="Pablo\DeliveryZones\Model\Zones"/>
+	<preference for="Pablo\DeliveryZones\Api\Data\ZonesSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Pablo\DeliveryZones\Model\ResourceModel\Zones\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">Pablo_zones</argument>
+			<argument name="resourceModel" xsi:type="string">Pablo\DeliveryZones\Model\ResourceModel\Zones\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="Pablo_zones_grid_data_source" xsi:type="string">Pablo\DeliveryZones\Model\ResourceModel\Zones\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+
+
+	<preference for="Pablo\DeliveryZones\Api\ConfigRepositoryInterface" type="Pablo\DeliveryZones\Model\ConfigRepository"/>
+	<preference for="Pablo\DeliveryZones\Api\Data\ConfigInterface" type="Pablo\DeliveryZones\Model\Config"/>
+	<preference for="Pablo\DeliveryZones\Api\Data\ConfigSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Pablo\DeliveryZones\Model\ResourceModel\Config\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">Pablo_config</argument>
+			<argument name="resourceModel" xsi:type="string">Pablo\DeliveryZones\Model\ResourceModel\Config\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="Pablo_config_grid_data_source" xsi:type="string">Pablo\DeliveryZones\Model\ResourceModel\Config\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+
+
+	<preference for="Pablo\DeliveryZones\Api\SectionsRepositoryInterface" type="Pablo\DeliveryZones\Model\SectionsRepository"/>
+	<preference for="Pablo\DeliveryZones\Api\Data\SectionsInterface" type="Pablo\DeliveryZones\Model\Sections"/>
+	<preference for="Pablo\DeliveryZones\Api\Data\SectionsSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Pablo\DeliveryZones\Model\ResourceModel\Sections\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">Pablo_sections</argument>
+			<argument name="resourceModel" xsi:type="string">Pablo\DeliveryZones\Model\ResourceModel\Sections\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="Pablo_sections_grid_data_source" xsi:type="string">Pablo\DeliveryZones\Model\ResourceModel\Sections\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+
+	<preference for="Pablo\DeliveryZones\Api\CustomerDeliveryZoneRepositoryInterface" type="Pablo\DeliveryZones\Model\CustomerDeliveryZoneRepository"/>
+	<preference for="Pablo\DeliveryZones\Api\Data\CustomerDeliveryZoneInterface" type="Pablo\DeliveryZones\Model\CustomerDeliveryZone"/>
+	<preference for="Pablo\DeliveryZones\Api\Data\CustomerDeliveryZoneSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Pablo\DeliveryZones\Model\ResourceModel\CustomerDeliveryZone\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">Pablo_customerdeliveryzone</argument>
+			<argument name="resourceModel" xsi:type="string">Pablo\DeliveryZones\Model\ResourceModel\CustomerDeliveryZone\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="Pablo_customerdeliveryzone_grid_data_source" xsi:type="string">Pablo\DeliveryZones\Model\ResourceModel\CustomerDeliveryZone\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

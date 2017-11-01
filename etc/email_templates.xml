@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+  ~
+  ~ Copyright (c) 2017. @pablo
+  ~
+  ~ Test Code
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="email_alert_template"
+              label="ZX Delivery Zones - Alert"
+              file="email_alert_template.html" type="html"
+              module="Pablo_DeliveryZones" area="adminhtml"/>
+</config>

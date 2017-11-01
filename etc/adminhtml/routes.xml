@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<!--
+  ~
+  ~ Copyright (c) 2017. @pablo
+  ~
+  ~ Test Code
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+	<router id="admin">
+		<route frontName="Pablo_deliveryzones" id="Pablo_deliveryzones">
+			<module before="Magento_Backend" name="Pablo_DeliveryZones"/>
+		</route>
+	<!--	<route frontName="Zones" id="Zones">
+			<module before="Magento_Backend" name="Pablo_DeliveryZones"/>
+		</route>
+		<route frontName="Sections" id="Sections">
+			<module before="Magento_Backend" name="Pablo_DeliveryZones"/>
+		</route>
+		<route frontName="Config" id="Config">
+			<module before="Magento_Backend" name="Pablo_DeliveryZones"/>
+		</route> -->
+	</router>
+</config>

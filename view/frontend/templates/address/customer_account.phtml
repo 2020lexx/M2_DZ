@@ -1,0 +1,43 @@
+<?php
+/**
+ *
+ * Copyright (c) 2017. @pablo
+ *
+ * Test Code
+ */
+?>
+<div class="Pablo_deliveryzones  zx-row">
+
+    <div class="zx-col-md-12">
+        <div id="delivery_map"></div>
+    </div>
+</div>
+<div class="Pablo_deliveryzones zx-col-md-12 zx-row primary">
+    <button  class="action save primary" id="Pablo_deliveryzones_address_view_all">
+        <span><?php echo __('View All Addresses') ?></span>
+    </button>
+</div>
+<div class="Pablo_deliveryzones zx-col-md-12 zx-row">
+  <?php
+        $customer_account = $block->functions->getZoneSectionViewB();
+          echo $customer_account['html_data'];
+    ?>
+</div>
+<div class="Pablo_deliveryzones  zx-row">
+    <div id="map_init" class="php_var" ><?php echo $block->helper->mapInit(); ?></div>
+    <div id="Pablo_code_mode" class="php_var">customer_account</div>
+    <div id="Pablo_out_zone" class="php_var"></div>
+    <div id="Pablo_fail_zone" class="php_var"></div>
+    <div id="customer_markers" class="php_var" ><?php echo $customer_account['markers_data']; ?></div>
+</div>
+
+<script type="text/x-magento-init">
+    {
+
+        "*": {
+        "Pablo_DeliveryZones/js/customer_account": {  }
+
+      }
+    }
+
+</script>

@@ -1,0 +1,136 @@
+<?xml version="1.0" ?>
+<!--
+  ~
+  ~ Copyright (c) 2017. @pablo
+  ~
+  ~ Test Code
+  -->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<!-- // todo: config APIs
+	<route method="POST" url="/V1/Pablo-deliveryzones/config">
+		<service class="Pablo\DeliveryZones\Api\ConfigRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::config_save"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/Pablo-deliveryzones/search">
+		<service class="Pablo\DeliveryZones\Api\ConfigRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::config_view"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/Pablo-deliveryzones/:configId">
+		<service class="Pablo\DeliveryZones\Api\ConfigRepositoryInterface" method="getById"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::config_view"/>
+		</resources>
+	</route>
+	<route method="PUT" url="/V1/Pablo-deliveryzones/:configId">
+		<service class="Pablo\DeliveryZones\Api\ConfigRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::config_update"/>
+		</resources>
+	</route>
+	<route method="DELETE" url="/V1/Pablo-deliveryzones/:configId">
+		<service class="Pablo\DeliveryZones\Api\ConfigRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::config_delete"/>
+		</resources>
+	</route>
+
+	<route method="POST" url="/V1/Pablo-deliveryzones/zones">
+		<service class="Pablo\DeliveryZones\Api\ZonesRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::zones_save"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/Pablo-deliveryzones/search">
+		<service class="Pablo\DeliveryZones\Api\ZonesRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::zones_view"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/Pablo-deliveryzones/:zonesId">
+		<service class="Pablo\DeliveryZones\Api\ZonesRepositoryInterface" method="getById"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::zones_view"/>
+		</resources>
+	</route>
+	<route method="PUT" url="/V1/Pablo-deliveryzones/:zonesId">
+		<service class="Pablo\DeliveryZones\Api\ZonesRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::zones_update"/>
+		</resources>
+	</route>
+	<route method="DELETE" url="/V1/Pablo-deliveryzones/:zonesId">
+		<service class="Pablo\DeliveryZones\Api\ZonesRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::zones_delete"/>
+		</resources>
+	</route>
+
+	<route method="POST" url="/V1/Pablo-deliveryzones/sections">
+		<service class="Pablo\DeliveryZones\Api\SectionsRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::sections_save"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/Pablo-deliveryzones/search">
+		<service class="Pablo\DeliveryZones\Api\SectionsRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::sections_view"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/Pablo-deliveryzones/:sectionsId">
+		<service class="Pablo\DeliveryZones\Api\SectionsRepositoryInterface" method="getById"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::sections_view"/>
+		</resources>
+	</route>
+	<route method="PUT" url="/V1/Pablo-deliveryzones/:sectionsId">
+		<service class="Pablo\DeliveryZones\Api\SectionsRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::sections_update"/>
+		</resources>
+	</route>
+	<route method="DELETE" url="/V1/Pablo-deliveryzones/:sectionsId">
+		<service class="Pablo\DeliveryZones\Api\SectionsRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::sections_delete"/>
+		</resources>
+	</route>
+
+	<route method="POST" url="/V1/Pablo-deliveryzones/customerdeliveryzone">
+		<service class="Pablo\DeliveryZones\Api\CustomerDeliveryZoneRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::CustomerDeliveryZone_save"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/Pablo-deliveryzones/search">
+		<service class="Pablo\DeliveryZones\Api\CustomerDeliveryZoneRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::CustomerDeliveryZone_view"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/Pablo-deliveryzones/:customerdeliveryzoneId">
+		<service class="Pablo\DeliveryZones\Api\CustomerDeliveryZoneRepositoryInterface" method="getById"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::CustomerDeliveryZone_view"/>
+		</resources>
+	</route>
+	<route method="PUT" url="/V1/Pablo-deliveryzones/:customerdeliveryzoneId">
+		<service class="Pablo\DeliveryZones\Api\CustomerDeliveryZoneRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::CustomerDeliveryZone_update"/>
+		</resources>
+	</route>
+	<route method="DELETE" url="/V1/Pablo-deliveryzones/:customerdeliveryzoneId">
+		<service class="Pablo\DeliveryZones\Api\CustomerDeliveryZoneRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Pablo_DeliveryZones::CustomerDeliveryZone_delete"/>
+		</resources>
+	</route>
+
+	-->
+</routes>

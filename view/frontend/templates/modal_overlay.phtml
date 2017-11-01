@@ -1,0 +1,96 @@
+
+<?php  if ($block->modalEnable()) { ?>
+    <div id="modal-overlay" style="display:none;">
+
+            <div class="Pablo_deliveryzones zx-row">
+                <div id="map_init" class="php_var" ><?php echo $block->helper->mapInit(); ?></div>
+                <div id="Pablo_code_mode" class="php_var">modal_overlay</div>
+                <div id="Pablo_one_view" class="php_var"><?php echo $block->modalOneView(); ?></div>
+                <div id="Pablo_out_zone" class="php_var"><?php echo $block->getOutZoneContent(); ?> </div>
+                <div id="Pablo_fail_zone" class="php_var"><?php echo $block->getFailZoneContent(); ?> </div>
+                <div class="zx-col-md-12 "><?php echo $block->getHeaderContent() ?></div>
+                <div class="zx-col-md-8 ">
+                    <div id="delivery_map"><h3 class="loading_data">Rendering..</h3></div>
+
+                </div>
+                <div id="Pablo_deliveryzones_data_result" class="zx-col-md-4 " >
+                    <div id="Pablo_deliveryzones_data_result_div" style="visibility: hidden;">
+                        <div><?php echo $block->getInZoneContent(); ?></div>
+                        <?php  if ($block->modalDlyDataView()) { ?>
+                           <!-- <div class="result-label"><?php //echo __('Zone') ?>:</div><div id="zone_name" class="result-data"></div>
+                            <div class="result-label"><?php //echo __('Section') ?>:</div><div id="section_name" class="result-data"></div>
+                            <hr class="result-line" >-->
+                            <div class="result-label"><?php echo __('Delivery ') ?>:</div><div id="section_delivery_data" class="result-data"></div>
+                            <hr class="result-line" >
+                            <div class="result-label"><?php echo __('Distance to Facility (by road)') ?>:</div><div id="distanceText" class="result-data"></div>
+                            <hr class="result-line" >
+                            <div class="result-label"><?php echo __('Delivery Cost: €') ?></div><div id="section_dly_cost" class="result-data"></div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+            <div class="Pablo_deliveryzones zx-row">
+                <div class="zx-col-md-4">
+                     <div><?php  echo $block->getCenterContent(); ?></div>
+                 </div>
+                <div class="zx-col-md-8">
+                    <form class="form" id="Pablo_deliveryzones_input_form" onsubmit="return false;" data-hasrequired="* Required Fields" data-mage-init='{"validation":{}}'>
+                        <fieldset class="fieldset">
+                                     <div class="field address required field_left">
+                                <label class="label" for="address"><span><?php echo __('Address') ?></span></label>
+                                <div>
+                                    <input size="35" required="true" name="address" id="address" class="input-text " type="text"/>
+                                </div>
+                            </div>
+                            <div class="field address_number required" >
+                                <label class="label" for="address_number"><span><?php echo __('Address Number') ?></span></label>
+                                <div>
+                                    <input size="10" maxlength="10" required="true" name="address_number" id="address_number"  class="input-text" type="text"/>
+                                 </div>
+                            </div>
+                            <div class="field pobox field_left">
+                                <label class="label" for="pobox"><span><?php  echo __('P.O. Box') ?></span></label>
+                                <div>
+                                    <input size="10" name="pobox" id="pobox" value="" class="input-text" type="text"   />
+                                </div>
+                            </div>
+                            <div class="field city required " style="float:left">
+                                <label class="label" for="city"><span><?php  echo __('City') ?></span></label>
+                                <div >
+                                    <input size="35" name="city" required="true" id="city" class="input-text" type="text"/>
+                                 </div>
+                            </div>
+                            <div class="field state required">
+                                <label class="label" for="state"><span><?php echo __('State') ?></span></label>
+                                <div >
+                                    <input  required size="4" minlength="2" required="true" name="state" id="state" class="input-text"  type="text"/>
+                                </div>
+                            </div>
+                            <div class="field country" style="display: none">
+                                <label class="label" for="country"><span><?php echo __('Country') ?></span></label>
+                                <div>
+                                    <input  required size="15" required="true" name="country" id="country" value="<?php /* @escapeNotVerified */ echo __('Italy') ?>" readonly class="input-text  form-control"  data-validate="{required:true}"/>
+                                 </div>
+                            </div>
+                            <div class="field button-right">
+
+                                <button id="Pablo_deliveryzones_submit"  class="action primary submit">
+                                    <span><?php  echo __('Submit') ?></span>
+                                </button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        <div class="zx-col-md-12 zx-row"><?php  echo $block->getFooterContent() ?></div>
+ </div>
+    <script type="text/x-magento-init">
+        {
+
+        "*": {
+        "Pablo_DeliveryZones/js/frontend_index": {  }
+
+      }
+    }
+</script>
+<?php } ?>
